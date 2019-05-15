@@ -18,7 +18,7 @@ target_include_directories(tz PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DI
 
 if(HAS_REMOTE_API)
   find_package(CURL REQUIRED)
-  target_link_libraries(tz PUBLIC $<BUILD_INTERFACE:${CURL_LIBRARIES}>)
+  target_link_libraries(tz PUBLIC ${CURL_LIBRARIES})
   target_include_directories(tz PUBLIC $<BUILD_INTERFACE:${CURL_INCLUDE_DIRS}>)
 endif()
 
